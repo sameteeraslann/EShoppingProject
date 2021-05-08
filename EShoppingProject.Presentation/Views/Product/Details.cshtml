@@ -1,0 +1,23 @@
+﻿
+@model ProductVMs
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-8">
+        <div class="car">
+            <div class="card-header">
+                    <h4 class="card-title">Product Detail</h4>
+            </div>
+            <div class="card-body">
+                <img src="~/images/product/@Model.ImagePath" height="200" width="200" alt="Not Found Image" class="card-img-top" />
+                <p class="card-title">@Model.ProductName</p>
+                <p class="card-text">@Model.Description</p>
+                <p class="card-text">@Model.UnitPrice.ToString("C2")</p>
+            </div>
+        </div>
+    </div>
+</div>

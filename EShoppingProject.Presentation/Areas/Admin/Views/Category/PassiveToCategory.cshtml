@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Category>
+@{
+    ViewData["Title"] = "PassiveToCategory";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="row mt-2">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Passive Categories</div>
+                <a asp-controller="Category" asp-action="Index" class="btn btn-primary ml-5">Active Categories
+                </a>
+
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Category Name</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.CategoryName</td>
+
+                                <td>
+                                    <a asp-controller="Category" asp-action="ActiveToCategory" class="btn btn-success" asp-route-id="@item.Id">Active</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

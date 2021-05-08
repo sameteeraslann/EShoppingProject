@@ -1,0 +1,20 @@
+﻿@inject SignInManager<AppUser> SignInManager
+@*@model ProfileDTO*@
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<div class="container">
+
+    <h2>Profil Özeti</h2>
+
+    <div class="header">
+        <img src="@Model.ImagePath" class="img-lg" width="100" height="100" />
+        <h3 class="card-title">İsim Soyisim: @Model.FullName</h3>
+        <h5 class="card-title">Kullanıcı Adı: @Model.UserName</h5>
+        <h5 class="card-title">Adres: @Model.Adress</h5>
+        @*<h5 class="card-title">Toplam Ürün Sayısı: @Model.ProductCount</h5>*@
+    </div>
+</div>

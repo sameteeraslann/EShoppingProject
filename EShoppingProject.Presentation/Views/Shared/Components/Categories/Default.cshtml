@@ -1,0 +1,18 @@
+﻿@model IEnumerable<CategoryVMs>
+
+<table class="table">
+    <thead>
+        <tr>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <a class="nav-link" text-black asp-area="" asp-controller="Product" asp-action="GetProductList" asp-route-id="@item.CateogryId">@item.CategoryName</a>
+            </tr>
+        }
+
+    </tbody>
+</table>

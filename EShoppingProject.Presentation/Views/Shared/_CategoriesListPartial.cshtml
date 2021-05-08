@@ -1,0 +1,25 @@
+﻿
+@model IEnumerable<Category>
+
+
+<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <div class="container">
+     <div class="container">
+         <div class="main-header">
+
+             <ul class="list-group list-group-horizontal">
+                 @foreach (var item in Model)
+                 {
+                     <li class="list-group-item">
+                         <a class="nav-link text-dark" asp-area="" asp-controller="Category" asp-action="Index">@item.CategoryName</a>
+                     </li>
+                 }
+             </ul>
+         </div>
+     </div>
+       
+       
+    </div>
+</nav>
+
+
